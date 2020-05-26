@@ -8,7 +8,400 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.wrapper
-				
+			.main-slider
+				.main-slider-arrow
+					.swiper-button.swiper-button-prev
+					.swiper-button.swiper-button-next
+				<!--У первых двух слайдо выводит src у остальных data-src-->
+				.swiper-list
+					.swiper-wrapper
+						.swiper-slide
+							.main-slider__slide
+								picture.main-slider__img
+									source(srcset="img/photos/slider-1.jpg" media="screen and (min-width: 700px)" data-main="data-main")
+									source(srcset="img/photos/slider-1.jpg" media="screen and (max-width: 700px)") 
+									img
+								.main-slider__info-cont
+									.wrapper
+										.main-slider__info
+											.main-slider__title Ответственное хранение<br> и обработка грузов в УрФО
+											.main-slider__btn
+												a(href="").btn Запросить цену
+						- for (let i = 0; i < 5; i++)
+							.swiper-slide
+								.main-slider__slide
+									picture.main-slider__img
+										source(data-srcset="img/photos/slider-1.jpg" media="screen and (min-width: 700px)" data-main="data-main").swiper-lazy
+										source(data-srcset="img/photos/slider-1.jpg" media="screen and (max-width: 700px)").swiper-lazy
+										img.swiper-lazy
+									.main-slider__info-cont
+										.wrapper
+											.main-slider__info
+												.main-slider__title Ответственное хранение<br> и обработка грузов в УрФО
+												.main-slider__btn
+													a(href="").btn Запросить цену
+
+												
+				.swiper-bullets
+					.swiper-pagination
+											
+
+
+			.about-cont
+				.wrapper
+					.about
+						.about-info
+							.title О складе
+							.about-text
+								p Логистический комплекс от Областного Аптечного<br> склада — это современный складской комплекс класса<br> «А» площадью в 11 300 кв. м. 
+								p Оказываем весь спектр услуг по обработке,<br> транспортировке, документообороту и ответственному<br> хранению грузов. 
+								p Специализируемся на хранении и обработке<br> лекарственных препаратов, медицинских изделий и<br> товаров аптечного ассортимента. 
+								p Осуществляем эту деятельность с 2015 года.
+							.about-img
+								img(src="img/about-img-1.svg")
+								img(src="img/about-img-2.svg")
+						.about-definition
+							.title Логистический комплекс<br> от Областного Аптечного<br> склада — это:
+							.definition__list
+								.definition__item
+									.definition__item-ico
+										img(src="img/definition-1.svg")
+									.definition__item-text 11 300 м. кв. для хранения ваших товаров
+								.definition__item
+									.definition__item-ico
+										img(src="img/definition-2.svg")
+									.definition__item-text Круглосуточныйрежим работы
+								.definition__item
+									.definition__item-ico
+										img(src="img/definition-3.svg")
+									.definition__item-text Постоянный мониторинг микроклимата
+								.definition__item
+									.definition__item-ico
+										img(src="img/definition-4.svg")
+									.definition__item-text Быстрая обработка заказов с WMS
+								.definition__item
+									.definition__item-ico
+										img(src="img/definition-5.svg")
+									.definition__item-text Профессиональная работа в фармацевтической дистрибуции
+			.gallery-cont
+				.wrapper
+					.gallery
+						.gallery__arrow
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+						.gallery__list
+							.swiper-list
+								.swiper-wrapper
+									- for (let i = 0; i < 3; i++)
+										.swiper-slide
+											a(href="").gallery__item.fancybox
+												img(src="img/photos/gallery-1.jpg" loading="lazy")
+										.swiper-slide
+											a(href="").gallery__item.fancybox
+												img(src="img/photos/gallery-1.jpg" loading="lazy")
+										.swiper-slide
+											a(href="").gallery__item.fancybox
+												img(src="img/photos/gallery-1.jpg" loading="lazy")
+			
+			.excursion-cont
+				.wrapper
+					form(action="")
+						.excursion
+							.excursion-title Записаться на экскурсию
+							.excursion-form
+								.form__inputs
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="text" placeholder="Имя" required)
+											label.default-input__label Ваше имя
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="email" placeholder="E-mail" required)
+											label.default-input__label E-mail
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="tel" placeholder="+7 (351) 000 00 00" required)
+											label.default-input__label Телефон
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									.form__submit
+										.form__submit-btn
+											input.btn(type="submit" value="Отправить")
+			.differences-cont
+				.wrapper
+					.differences
+						.differences-title Отличие <span>ОХ</span><br> от <strong>аренды</strong> склада
+						.differences__list
+							.differences__item
+								.differences__item-title Ответственное хранение
+								.differences__item-el Оплата только за фактически занимаемый объем товара<br> <span>(тонны или М2);</span>
+								.differences__item-el <span>Возможность легко</span> расширить или сократить занимаемый объем<br> <span>хранения;</span>
+								.differences__item-el Легкая интеграция системы управления складом<br> <span>(WMS) с любой системой контроля товарных остатков (1C, SAP, Axelot и др.);</span>
+								.differences__item-el <span>Несение складом ОХ полной ответсвенности за сохранность товара<br> на время хранения.</span> Весь товар застрахован;
+								.differences__item-el Оплата за фактически сказанный объем <span> погрузочно разгрузочных<br> работ и дополнительных услуг;</span>
+								.differences__item-el Отсутствие затрат на ремонт склада и техники <span>или приобретение<br> необходимого оборудования</span>
+							.differences__item
+								.differences__item-title Содержание склада
+								.differences__item-el Оплачивается вся арендуемая площадь,<br>
+									span независимо от ее использования;
+								.differences__item-el Необходимо арендовать<br>
+									span или покупать новый склад, если товара станет больше;
+								.differences__item-el Компании редко могут позволить себе мощные складские системы<br> типа WMS
+									span Это снижает возможности для оптимизации площадки;
+								.differences__item-el Собственник начинает зависеть от кладовщиков и грузчиков<br>
+									span Возможно воровство и другие “Человеческие факторы”;
+								.differences__item-el Необходимо постоянно платить заработную плату.
+									span При этом людей<br> на складе, обычно, больше, чем трубется;
+								.differences__item-el Доказать факт краж,
+									span порчи товара или сокрытия недосдачи<br> сотрудниками бывает сложно.
+			.system-management-cont
+				.wrapper
+					.system-management
+						.system-management__info
+							.title Профессиональная система управления складом от AZ.WMS
+							.system-management__text
+								p Используем современную систему управления  складом WMS, чтобы в любое время получить информацию о состоянии рабочих процессов на складе или актуальную информацию о товарных остатках клиентов.
+								p Мы можем сформировать персональные отчеты и интегрировать с любой системой учета клиента.
+						.system-management__list
+							.system-management__item Повышение общей производительности работы склада;
+							.system-management__item Повышение точности и скорости сбора заказов;
+							.system-management__item Сокращение затрат на регулярный менеджмент;
+							.system-management__item Повышение эффективности взаимодействия с клиентами;
+							.system-management__item Сокращение ручного ввода данных и минимилизация ошибок;
+							.system-management__item Сокращение расходов  на персонал;
+							.system-management__item Минимилизация влияния человеческого фактора, недопущение ошибок при комплектации
+							.system-management__item Выполнение инвертаризации в реальном времени.
+							
+			.solution-cont
+				.wrapper
+					.solution
+						.title Готовые решения
+						.tabs
+							.tabs__top
+								.tabs__tab.active(data-id="1") Фулфилмент для интернет-магазина
+								.tabs__tab(data-id="2") Кросс-докинг
+								.tabs__tab(data-id="3") Комплектация товаров
+									span (10)
+							.tabs__content.active(data-id="1")
+								p Готовое решение для интернет-магазинов разной направленности — комплекс проверенных услуг, необходимых для удобной и качественной логистики товаров.
+								h4 Что входит в решение?
+								ul
+									li штучная обработка товаров: приемка, комплектация заказов, отгрузка;
+									li предоставление вес-объемных характеристик и фото товара;
+									li передача заказа в курьерские службы или доставка в ПВЗ.
+								a(href="").btn.fancybox Оставить заявку
+							.tabs__content(data-id="2")
+								p 2 Готовое решение для интернет-магазинов разной направленности — комплекс проверенных услуг, необходимых для удобной и качественной логистики товаров.
+								h4 Что входит в решение?
+								ul
+									li штучная обработка товаров: приемка, комплектация заказов, отгрузка;
+									li предоставление вес-объемных характеристик и фото товара;
+									li передача заказа в курьерские службы или доставка в ПВЗ.
+								a(href="").btn.fancybox Оставить заявку
+							.tabs__content(data-id="3")
+								p 3 Готовое решение для интернет-магазинов разной направленности — комплекс проверенных услуг, необходимых для удобной и качественной логистики товаров.
+								h4 Что входит в решение?
+								ul
+									li штучная обработка товаров: приемка, комплектация заказов, отгрузка;
+									li предоставление вес-объемных характеристик и фото товара;
+									li передача заказа в курьерские службы или доставка в ПВЗ.
+								a(href="").btn.fancybox Оставить заявку
+			.services-cont
+				.wrapper
+					.services
+						.title Услуги
+						.services__list
+							.services__item
+								.services__item-ico
+									img(src="img/services-1.svg")
+								.services__item-text Приемка товара (штука, коробка, паллета)
+							.services__item
+								.services__item-ico
+									img(src="img/services-2.svg")
+								.services__item-text Стикеровка, переупаковка, доработка товара
+
+							.services__item
+								.services__item-ico
+									img(src="img/services-3.svg")
+								.services__item-text Комплектация товара (штука, коробка, паллета)
+							.services__item
+								.services__item-ico
+									img(src="img/services-4.svg")
+								.services__item-text Предоставление гофрокороба
+							.services__item
+								.services__item-ico
+									img(src="img/services-5.svg")
+								.services__item-text Предоставление европоддонов
+							.services__item
+								.services__item-ico
+									img(src="img/services-6.svg")
+								.services__item-text Обмотка стрейч пленкой
+
+							.services__item
+								.services__item-ico
+									img(src="img/services-7.svg")
+								.services__item-text Формирование наборов (комплектов) акционного товара из нескольких единиц товара 
+							.services__item
+								.services__item-ico
+									img(src="img/services-8.svg")
+								.services__item-text Определение брака с последующим изъятием
+							.services__item
+								.services__item-ico
+									img(src="img/services-9.svg")
+								.services__item-text Предоставление отчета - расшифровки работ по датам и видам, остаткам на складе и т.д.
+							.services__item
+								.services__item-ico
+									img(src="img/services-10.svg")
+								.services__item-text Логистический консалтинг
+			.partners-cont
+				.wrapper
+					.partners
+						.title Наши клиенты
+						.partners__list
+							.partners__item
+								figure.partners__item-img
+									img(src="img/partners-1.png")
+								.partners__item-text НПФ Материа Медика
+							.partners__item
+								figure.partners__item-img
+									img(src="img/partners-2.png")
+								.partners__item-text Полисорб
+							.partners__item
+								figure.partners__item-img
+									img(src="img/partners-3.png")
+								.partners__item-text АСНА
+							.partners__item
+								figure.partners__item-img
+									img(src="img/partners-4.png")
+								.partners__item-text Министирство здравоохранения Челябинской области
+
+			.calc-cont
+				.wrapper
+					.calc
+						.title Расчет стоимости
+						.calc-cities Логопарки в <span>г. Челябинск</span>
+						form(action="")
+							.calc-form
+								.calc-form__item
+									.calc-form__title Общий объем хранения:
+									.form__inputs.form__inputs--size
+										.default-input
+											input.default-input__input(type="text" placeholder="Паллетомест" )
+											label.default-input__label
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										.default-input
+											input.default-input__input(type="text" placeholder="Тонн")
+											label.default-input__label
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+										.default-input
+											input.default-input__input(type="text" placeholder="м3")
+											label.default-input__label
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+								.calc-form__item
+									.calc-form__title Тип хранения:
+									.form__inputs.form__inputs--radio
+										.default-input.default-input--radio
+											input(type="radio" id="1" hidden name="1").default-radio__input
+											label(for="1").default-radio__label Стеллажный
+										.default-input.default-input--radio
+											input(type="radio" id="2" hidden name="1").default-radio__input
+											label(for="2").default-radio__label Напольный
+										.default-input.default-input--radio
+											input(type="radio" id="3" hidden name="1").default-radio__input
+											label(for="3").default-radio__label Мелкоячеистый
+								.calc-form__item
+									.calc-form__title Что будем хранить?
+									.form__inputs.form__inputs--2.form__inputs--radio
+										.default-input.default-input--radio
+											input(type="radio" id="4" hidden name="2").default-radio__input
+											label(for="4").default-radio__label Товары народного потребления
+										.default-input.default-input--radio
+											input(type="radio" id="5" hidden name="2").default-radio__input
+											label(for="5").default-radio__label Лекарственные средства
+										.default-input.default-input--radio
+											input(type="radio" id="6" hidden name="2").default-radio__input
+											label(for="6").default-radio__label Изделия медицинского назначения
+										.default-input.default-input--radio
+											input(type="radio" id="7" hidden name="2").default-radio__input
+											label(for="7").default-radio__label Бытовая химия
+										.default-input.default-input--radio
+											input(type="radio" id="8" hidden name="2").default-radio__input
+											label(for="8").default-radio__label Алкогольная продукция
+										.default-input.default-input--radio
+											input(type="radio" id="9" hidden name="2").default-radio__input
+											label(for="9").default-radio__label Обувь
+										.default-input.default-input--radio
+											input(type="radio" id="10" hidden name="2").default-radio__input
+											label(for="10").default-radio__label Оборудование
+										.default-input.default-input--radio
+											input(type="radio" id="11" hidden name="2").default-radio__input
+											label(for="11").default-radio__label БАДы
+										.default-input.default-input--radio
+											input(type="radio" id="12" hidden name="2").default-radio__input
+											label(for="12").default-radio__label Другое
+							.calc-form__bot
+								.calc-form__title Объем отгружаемого товара в месяц:
+								.calc-form__input
+									.default-input
+										input.default-input__input(type="text" placeholder="Примерное количество и тип операция" required)
+										label.default-input__label
+										.default-input__error
+											.error-text
+												<!-- текст ошибки -->
+									.form__submit
+										.form__submit-btn
+											input.btn(type="submit" value="Отправить расчет")
+			.contacts-cont
+				.wrapper
+					.title Контакты
+					.contacts
+						.contacts-info
+							.contacts-info__item
+								.contacts-info__item-name Мальцев Дмитрий Николаевич
+								.contacts-info__item-post Директор департамента логистики АО ОАС
+								.contacts-info__elements
+									.contacts-info__el
+										.label Телефон
+										.text
+											a(href="tel:+79068901060") +7 906 890 10 60
+									.contacts-info__el
+										.label E-mail
+										.text
+											a(href="mailto:dmitriy.malcev@oac74.ru") dmitriy.malcev@oac74.ru
+							.contacts-info__item
+								.contacts-info__item-name Трифонов Иван Сергеевич
+								.contacts-info__item-post Заместитель директора департамента логистики АО ОАС
+								.contacts-info__elements
+									.contacts-info__el
+										.label Телефон
+										.text
+											a(href="tel:+79090777437") +7 909 077 74 37
+									.contacts-info__el
+										.label E-mail
+										.text
+											a(href="mailto:dmitriy.malcev@oac74.ru") i.trifonov@oac74.ru
+							.contacts-address
+								.label Адрес
+								.text г. Челябинск, ул. Радонежская 9
+						.map
+							<!-- img/ico-marker.svg -->
+							#map
+								<!--карту сюда-->
+								img(src="img/map.jpg", alt="")
+
+
 		include inc/footer.pug
 		include inc/scripts.pug

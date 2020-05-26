@@ -1,0 +1,60 @@
+.calc
+	&-cont
+		background: var(--main-color)
+		color: #fff
+		padding: 90px
+
+	.title
+		margin-bottom: 40px
+
+	&-cities
+		font-weight: 800
+		font-size: rem(20)
+		line-height: 24px
+		letter-spacing: 0.02em
+		margin-bottom: 50px
+
+		span
+			color: var(--second-color)
+
+	&-form
+		display: flex
+
+		&__title
+			font-weight: 800
+			font-size: rem(20)
+			line-height: 24px
+			letter-spacing: 0.02em
+			margin-bottom: 30px
+
+		&__item
+			flex: none
+
+			&:not(:last-child)
+				margin-right: 88px
+
+			&:nth-child(2)
+				margin-right: 150px
+
+		&__bot
+			margin-top: 35px
+
+			.calc-form__input
+				display: flex
+			
+			.default-input
+				max-width: 600px
+				margin-right: 65px
+
+			.calc-form__title
+				margin: 0
+
+	.form__inputs
+		&--size
+			grid-gap: 17px 16px
+
+		&--radio
+			grid-gap: 17px 50px
+
+	.default-input__input
+		border: 1px solid rgba(255, 255, 255, 0.2)

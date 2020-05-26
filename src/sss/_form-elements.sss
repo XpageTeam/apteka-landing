@@ -105,13 +105,13 @@ textarea.default-input__input
 	&__input
 		border: 1px solid var(--border-color)
 		border-radius: 5px
-		font-size: em(14)
+		font-size: rem(14)
 		color: inherit #fff
-		size: 100% 53px
+		size: 100% 40px
 		transition: border-color .3s ease
+		padding: 0 15px
+		background: transparent
 
-		&:not(&--select)
-			padding: 17px 16px
 
 		&:not(.default-input__input--textarea)
 			max-height: 53px
@@ -174,12 +174,15 @@ textarea.default-input__input
 
 				&:after
 					content: "*"
-					color: red
+					color: currentColor
+					margin-left: 3px
 
 	&__label
-		font-size: em(12)
-		color: #919191
-		margin: 0 0 10px
+		font-size: rem(14)
+		margin: 0 0 5px
+
+		&:empty
+			display: none
 
 		&--file
 			position: absolute -1px
@@ -195,6 +198,29 @@ textarea.default-input__input
 		opacity: 0
 		pointer-events: none
 
+.default-radio
+
+	&__input
+		&:checked, &[checked]
+			~ .default-radio__label
+				&::before
+					background: #fff
+
+			
+			
+	&__label
+		position: relative
+		padding-left: 30px
+		font-size: rem(14)
+
+		&::before
+			content: ''
+			size: 14px
+			border-radius: 50%
+			border: 1px solid #fff
+			display: block
+			position: absolute 0 * * 0
+		
 @supports (display: grid)
 	.form__inputs
 		margin: 0 !important

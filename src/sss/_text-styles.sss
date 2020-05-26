@@ -2,31 +2,18 @@ strong
 	font-weight: bold
 
 p
-	margin-top: 27px
+	margin-top: 22px
 
-@custom-selector :--heading h2, h3, h4, h5, h6
+
 
 h2, h3, h4, h5, h6, p, img, table, .table-wrap, ul, ol
 
 	&:first-child
 		margin-top: 0
 
-:--heading
-	position: relative
-	text-transform: lowercase
-
-	&:first-letter
-		text-transform: uppercase	
-
-	&:before
-		content: ""
-		position: absolute em(9) calc(100% + 23px) * *
-		transform: rotateZ(45deg)
-		background: var(--main-color)
-		size: 5px
 
 h2, h3, h4, h5, h6
-	font-weight: 300
+	font-weight: 800
 	margin-bottom: 5px
 	
 	&:not(:first-child)
@@ -36,27 +23,27 @@ h2, h3, h4, h5, h6
 		margin-top: 0
 
 h2
-	font-size: em(28)
+	font-size: rem(28)
 	// line-height: calc(32 / 28)
 	line-height: 128%
 
 h3
-	font-size: em(23)
+	font-size: rem(23)
 	// line-height: calc(28 / 25)
 	line-height: 146%
 
 h4
-	font-size: em(20)
+	font-size: rem(20)
 	// line-height: calc(28 / 22)
 	line-height: 182%
 
 h5
-	font-size: em(18)
+	font-size: rem(18)
 	// line-height: calc(24 / 19)
 	line-height: 135%
 
 h6
-	font-size: em(16)
+	font-size: rem(16)
 	line-height: 140%
 
 blockquote
@@ -124,7 +111,7 @@ ul, ol
 	&:not([class]) li
 
 		&:not(:first-child)
-			margin: 3px 0 0
+			margin: 11px 0 0
 
 		&:before
 			display: inline-block
@@ -139,7 +126,7 @@ ul, ol
 				margin-right: 10px !important
 
 			&:not(:first-child)
-				margin-top: 5px
+				margin-top: 11px
 
 ul
 
@@ -148,11 +135,11 @@ ul
 		> li
 
 			&:before
-				content: "—"
+				content: ""
 				margin: 0 16px 2px 0
 				display: inline-block
 				border-radius: 50%
-				background: var(--mainColor)
+				background: #000
 				size: 6px
 				text-indent: 0
 
@@ -188,21 +175,17 @@ ol:not([class])
 			width: inherit
 
 	h2
-		font-size: em(24)
+		font-size: rem(24)
 
 	h3
-		font-size: em(21)
+		font-size: rem(21)
 
 	h4
-		font-size: em(18)
+		font-size: rem(18)
 
 	h5
-		font-size: em(16)
+		font-size: rem(16)
 
 	h6
-		font-size: em(14)
+		font-size: rem(14)
 
-	:--heading
-
-		&:before
-			display: none

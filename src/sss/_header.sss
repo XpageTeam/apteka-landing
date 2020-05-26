@@ -1,0 +1,49 @@
+.head
+	background: var(--main-color)
+	color: #ffffff
+	z-index: 10
+	position: sticky
+	top: 0
+
+	.wrapper
+		position: relative
+		display: flex
+		align-items: center
+		padding: 22px 0
+
+	&-logo
+		position: absolute 0 * * 0
+		background: var(--main-color)
+		padding: 12px 18px
+		border-radius: 5px
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+
+		img
+			display: block
+
+	&-phone
+		margin-left: 160px
+
+		a
+			font-weight: 600
+			font-size: rem(14)
+			line-height: 17px
+			letter-spacing: 0.02em
+			text-transform: uppercase
+
+.head-menu
+	margin-left: auto
+
+	&__list
+		display: flex
+
+	&__item
+		&:not(:first-child)
+			margin-left: 45px
+
+	&__link
+		font-size: rem(14)
+		line-height: 17px
+		letter-spacing: 0.02em
+		color: currentColor
+

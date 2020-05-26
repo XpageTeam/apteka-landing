@@ -61,5 +61,9 @@
     "last 2 firefox version",
     "last 2 safari version",
     "last 1 ie version"
-  ]
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "swiper": "^5.4.1"
+  }
 }

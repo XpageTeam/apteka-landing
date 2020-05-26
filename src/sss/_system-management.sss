@@ -1,0 +1,36 @@
+.system-management
+	display: flex
+
+	&-cont
+		background: var(--main-color)
+		color: #fff
+		padding: 120px 0 90px
+
+	.title
+		margin-bottom: 40px
+
+	&__info
+		max-width: 500px
+		margin-right: auto
+		flex: none
+
+	&__list
+		column-count: 2
+		gap: 90px
+		break-inside: avoid
+		max-width: 600px
+
+	&__item
+		position: relative
+		padding-left: 22px
+		letter-spacing: 0.02em
+		margin-bottom: 40px
+		font-weight: 500
+
+		&::before
+			content: ''
+			display: block
+			size: 7px
+			border-radius: 50%
+			background: var(--second-color)
+			position: absolute 5px * * 0

@@ -1,0 +1,51 @@
+.differences
+	&-cont
+		margin: 120px 0 105px
+
+	&-title
+		font-weight: 800
+		font-size: rem(42)
+		line-height: 51px
+		letter-spacing: 0.02em
+		margin-bottom: 60px
+
+		span
+			color: var(--main-color)
+
+		strong
+			color: var(--thrid-color)
+	
+	&__list
+		display: flex
+		margin: 0 0 -65px -65px
+
+
+	&__item
+		width: calc((100% - 65px * 2) / 2)
+		margin: 0 0 65px 65px
+
+		&:nth-child(1)
+			.differences__item-title
+				color: var(--main-color)
+		
+		&:nth-child(2)
+			.differences__item-title
+				color: var(--thrid-color)
+
+		&-title
+			font-weight: bold
+			font-size: 22px
+			line-height: 22px
+			letter-spacing: 0.02em
+			margin-bottom: 5px
+
+		&-el
+			padding: 15px 0
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+			font-size: rem(14)
+			line-height: 179%
+
+			letter-spacing: 0.02em
+
+			span
+				color: rgba(0, 0, 0, 0.5)

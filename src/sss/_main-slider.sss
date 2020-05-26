@@ -1,0 +1,95 @@
+.main-slider
+	position: relative
+
+	img
+		display: block
+		width: 100%
+
+	&__slide
+		position: relative
+
+	&__info
+		flex: 1 1 auto
+
+		&-cont
+			position: absolute 0 0 0 0 
+			z-index: 10
+			display: flex
+			align-items: center
+			color: #fff
+			text-decoration: none
+			z-index: 10
+
+			&::before
+				content: ''
+				display: block
+				position: absolute 0 0 0 0
+				background: #000000
+				z-index: 5
+				opacity: 0.8
+
+			.wrapper
+				flex: 1 1 auto
+				z-index: 10
+
+
+
+	&__title
+		font-weight: 800
+		font-size: rem(56)
+		line-height: 123.9%
+
+		letter-spacing: 0.02em
+
+	&__btn
+		margin-top: 40px
+
+		
+
+	&-arrow
+		position: absolute calc(50% - 15px) 0 * 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		z-index: 10
+		padding: 0 40px
+
+	.swiper-list
+		overflow: hidden
+
+
+	.swiper-button
+		margin: 0 !important
+		position: relative
+		left: auto
+		top: auto
+		right: auto
+		size: 20px 40px
+		background: url('../img/ico-arrow-main-slider.svg') no-repeat center
+
+		&::after
+			display: none
+
+	
+		&-prev
+			transform: rotate(180deg)
+
+	.swiper-bullets
+		position: absolute * 0 0 0
+		padding-bottom: 30px
+
+	.swiper-pagination
+		position: relative
+		display: flex
+		justify-content: center
+
+		&-bullet
+			size: 10px
+			background: #ffffff
+			opacity: 1
+
+			&:not(:last-child)
+				margin-right: 13px
+
+			&-active
+				background: var(--main-color)

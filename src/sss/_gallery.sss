@@ -1,0 +1,30 @@
+.gallery
+
+	&-cont
+		margin: 35px 0
+		overflow-x: hidden
+
+	&__arrow
+		position: relative
+		margin-bottom: 30px
+		display: flex
+		justify-content: flex-end
+
+	.swiper-button
+		size: 30px
+		position: static
+		background: url('../img/ico-arrow-gallery.svg') no-repeat center, var(--main-color)
+		margin: 0
+
+
+		&::after
+			display: none
+
+		&-prev
+			transform: rotate(180deg)
+
+		&-next
+			margin-left: 5px
+
+
+
