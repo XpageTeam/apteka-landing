@@ -1,7 +1,7 @@
 .head
 	background: var(--main-color)
 	color: #ffffff
-	z-index: 10
+	z-index: 20
 	position: sticky
 	top: 0
 
@@ -9,7 +9,7 @@
 		position: relative
 		display: flex
 		align-items: center
-		padding: 22px 0
+		padding: 22px 20px
 
 	&-logo
 		position: absolute 0 * * 0
@@ -47,3 +47,53 @@
 		letter-spacing: 0.02em
 		color: currentColor
 
+@media (max-width: 1500px)
+
+	.head-logo img
+		width: 70px
+
+@media (max-width: 1300px)
+
+	.head-phone
+		margin-left: 60px
+
+@media (max-width: 1000px)
+
+	.head-menu__item:not(:first-child)
+		margin-left: 20px
+
+	.head-phone
+		margin-left: 30px
+
+@media (max-width: 660px)
+
+	.head .wrapper
+		flex-wrap: wrap
+		padding: 12px 0px 12px 20px
+
+	.head-menu
+		order: 1
+
+	.head-menu
+		&__list
+			position: relative
+			width: calc(100vw - 130px)
+			margin-left: auto
+			overflow-x: auto
+			-webkit-overflow-scrolling: touch
+
+			&::after
+				content: ''
+				display: block
+				size: 20px 1px
+				flex: none
+
+		&__link
+			white-space: nowrap
+
+	.head-phone
+		margin-left: auto
+		width: 100%
+		justify-content: flex-end
+		display: flex
+		padding-right: 20px

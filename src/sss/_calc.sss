@@ -2,7 +2,7 @@
 	&-cont
 		background: var(--main-color)
 		color: #fff
-		padding: 90px
+		padding: 90px 0
 
 	.title
 		margin-bottom: 40px
@@ -58,3 +58,54 @@
 
 	.default-input__input
 		border: 1px solid rgba(255, 255, 255, 0.2)
+
+@media (max-width: 1500px)
+
+	.calc
+		&-cont
+			padding: 50px 0
+
+@media (max-width: 1300px)
+
+	.calc-form__item:nth-child(2)
+		margin-right: 80px
+
+@media (max-width: 1200px)
+
+	.calc-form
+		flex-wrap: wrap
+
+	.calc-cities
+		margin-bottom: 30px
+
+	.calc-form
+		margin: 0 0 -30px -30px
+
+		&__item
+			width: calc((100% - 30px * 2) / 2)
+			margin: 0 0 30px 30px !important
+			flex: 1 1 auto
+
+@media (max-width: 667px)
+
+	.calc-cont
+		padding: 30px 0
+
+	.calc-form
+		margin: 0 0 -30px -30px
+
+		&__item
+			width: 100%
+			margin: 0 0 30px 30px !important
+
+
+	.calc-form__bot 
+		.calc-form__input
+			flex-direction: column
+		
+		.calc-form__title
+			margin-bottom: 20px
+
+		.default-input
+			margin-right: 0
+		

@@ -61,3 +61,72 @@
 				pointer-events: none
 				transform: translate3d(0,5px,0)
 
+@media (max-width: 1500px)
+
+	.solution-cont
+		padding: 50px 0
+
+@media (max-width: 1200px)
+
+	.solution .tabs__tab
+		width: 420px
+
+	.solution .tabs__top
+		margin-right: 40px
+
+
+
+@media (max-width: 1000px)
+	.solution .tabs__tab
+		width: 245px
+
+
+	.solution .tabs__tab
+		padding: 15px 20px
+		font-size: 15px
+
+	.solution .tabs__tab:not(:last-child)
+		margin-bottom: 20px
+
+@media (max-width: 667px)
+
+	.solution-cont
+		padding: 30px 0
+
+		.title
+			margin-bottom: 20px
+
+	.solution 
+		.tabs
+			flex-direction: column
+
+			&__top
+				margin: 0 0 20px 0
+				display: flex
+				flex-direction: column
+
+
+		.tabs__tab
+			width: 100%
+			margin: 0 !important
+			box-shadow: none
+			border-bottom: 1px solid var(--main-color)
+			border-radius: 0
+			padding: 15px 0
+
+
+			&::after
+				content: ''
+				position: auto calc(50% - 10px) -6px *
+				background: #f8f9fa
+				size: 10px
+				border-right: 1px solid var(--main-color)
+				border-bottom: 1px solid var(--main-color)
+
+			&.active
+				background: #f8f9fa
+				color: #000
+				order: 1
+
+
+				

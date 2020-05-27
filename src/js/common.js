@@ -1,8 +1,9 @@
 import $ from "jquery";
+import is from "is_js";
 
 window.jQuery = $
 window.$ = $
-// window.is = is
+window.is = is
 
 require("./jquery.fancybox.js");
 
@@ -89,13 +90,33 @@ document.addEventListener("DOMContentLoaded", function(){
 			navigation: {
 		        nextEl: '.gallery .swiper-button-next',
 		        prevEl: '.gallery .swiper-button-prev',
-		    },
-		    pagination: {
-		        el: '.gallery .swiper-pagination',
-		        type: 'bullets',
-		        clickable: true,
-		    },
+			},
+			breakpoints: {
+			    667: {
+					spaceBetween: 100,
+				},
+				320: {
+					spaceBetween: 20,
+			    },
+			}
 		});
 
 	})
+})
+
+document.addEventListener("DOMContentLoaded", function(){
+	if($(window).width() > 667){
+		$("body").on('click', '[href^="#"]', function(e){
+			
+			// e.preventDefault();
+			$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 70}, 1000);
+		});
+
+	} else {		
+		$("body").on('click', '[href^="#"]', function(e){
+			// e.preventDefault();
+			$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 70}, 1000);
+		});
+	}
+
 })

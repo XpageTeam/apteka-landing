@@ -26,6 +26,7 @@
 		letter-spacing: 0.02em
 		margin-bottom: 40px
 		font-weight: 500
+		break-inside: avoid
 
 		&::before
 			content: ''
@@ -34,3 +35,41 @@
 			border-radius: 50%
 			background: var(--second-color)
 			position: absolute 5px * * 0
+
+@media (max-width: 1500px)
+
+	.system-management-cont
+		padding: 50px 0 
+
+@media (max-width: 1200px)
+
+	.system-management
+		flex-direction: column
+
+		&__info
+			max-width: 100%
+
+	.system-management__list
+		grid-gap: 30px
+		margin-top: 30px
+		column-count: 3
+		max-width: 100%
+
+@media (max-width: 667px)
+
+	.system-management-cont
+		padding: 30px 0
+
+
+	.system-management
+		&__list
+			grid-gap: 15px
+			column-count: 2
+
+		&__item
+			padding-left: 15px
+			margin-bottom: 20px
+			font-size: rem(13)
+			
+	
+		

@@ -7,6 +7,7 @@
 
 	&__list
 		display: flex
+		flex-wrap: wrap
 		justify-content: center
 		margin: 0 0 -30px -30px
 
@@ -30,3 +31,46 @@
 			line-height: 148.4%
 			text-align: center
 			margin-top: 25px
+
+@media (max-width: 1500px)
+
+	.partners-cont
+		padding: 50px 0
+
+@media (max-width: 1200px)
+
+	.partners__item 
+		width: calc((100% - 30px * 4)/4)
+		margin: 0 0 30px 30px
+
+		&-text
+			margin-top: 15px
+
+
+@media (max-width: 1000px)
+
+	.partners
+		&__list
+			margin: 0 0 -20px -20px
+
+		&__item 
+			width: calc((100% - 20px * 4)/4)
+			margin: 0 0 20px 20px
+
+
+			&-img
+				height: 85px
+				padding: 0 20px
+
+@media (max-width: 667px)
+
+	.partners-cont
+		padding: 30px 0
+
+	.partners
+
+		.title
+			margin-bottom: 20px
+
+		&__item 
+			width: calc((100% - 20px * 2)/2)

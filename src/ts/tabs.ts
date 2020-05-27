@@ -13,10 +13,10 @@ domReady(() => {
             .remove("active");
 
         return new Promise(resolve => {
-            setTimeout(function(){
+            // setTimeout(function(){
                 contentElement.style.display = "";
                 resolve()
-            }, 300)
+            // }, 10)
         })
     };
 

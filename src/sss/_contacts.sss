@@ -78,6 +78,43 @@
 			letter-spacing: 0.02em
 
 
-		
+@media (max-width: 1500px)
 
+	.contacts-cont
+		padding: 50px 0
 
+@media (max-width: 1200px)
+
+	.contacts .map
+		width: 480px
+
+@media (max-width: 1000px)
+
+	.contacts
+		flex-direction: column
+
+		&-info
+			margin-right: 0
+
+	.contacts 
+		.map
+			width: 100%
+			margin: 30px 0 0 0
+
+		.bx-yandex-map
+			width: 100% !important
+
+@media (max-width: 660px)
+
+	.contacts-info__elements
+		flex-direction: column
+
+	.contacts
+		&-info__el
+			width: 100%
+
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		.bx-yandex-map
+			height: 250px !important
