@@ -287,7 +287,32 @@ html(lang="ru")
 					.calc
 						.title Расчет стоимости
 						.calc-cities Логопарки в <span>г. Челябинск</span>
+						
 						form(action="")
+							.calc-form__data
+								.form__inputs.form__inputs--4
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="text" placeholder="Имя" required)
+											label.default-input__label Ваше имя
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="email" placeholder="E-mail" required)
+											label.default-input__label E-mail
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									.form__inputs-input
+										.default-input
+											input.default-input__input(type="tel" placeholder="+7 (351) 000 00 00" required)
+											label.default-input__label Телефон
+											.default-input__error
+												.error-text
+													<!-- текст ошибки -->
+									
 							.calc-form
 								.calc-form__item
 									.calc-form__title Общий объем хранения:
